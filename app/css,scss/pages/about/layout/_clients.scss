@@ -1,0 +1,54 @@
+.clients {
+  background: $darkGreen;
+  color: #fff;
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+
+  .clients-container {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    z-index: 1;
+
+    h2 {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .pt4-a {
+    width: 10rem;
+    position: absolute;
+    top: 0;
+    left: -5rem;
+  }
+}
+
+.clients-flex {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 4rem;
+
+  .client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    img {
+      width: 60%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .clients-flex {
+    flex-direction: row;
+
+    .client {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

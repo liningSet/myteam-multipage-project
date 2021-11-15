@@ -1,0 +1,40 @@
+.prefooter {
+  @extend .features;
+  background: $lightRed;
+  color: $darkGreen;
+
+  .pt6 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.prefooter-container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    @include contact-btn($darkGreen);
+
+    &:hover {
+      background: $darkGreen;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .prefooter-container {
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      font-size: 1.25rem;
+    }
+  }
+}

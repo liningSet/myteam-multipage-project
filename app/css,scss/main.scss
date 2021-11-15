@@ -1,0 +1,85 @@
+@import "./utilities/animations";
+@import "./utilities/mixins";
+@import "./utilities/variables";
+
+@import "./components/navbar";
+@import "./components/burger-menu";
+
+@import "./pages/home/layout/header";
+@import "./pages/home/layout/features";
+@import "./pages/home/layout/testimonials";
+@import "./pages/home/layout/prefooter";
+@import "./pages/home/layout/footer";
+
+@import "./pages/about/layout/header";
+@import "./pages/about/layout/staff-members";
+@import "./pages/about/layout/clients";
+
+@import "./pages/contact/layout/contact";
+@import "./pages/contact/layout/footer";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(1, 72, 80);
+}
+
+button,
+a {
+  cursor: pointer;
+  transition: $trans;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.pt {
+  pointer-events: none;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 6.5vw;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}

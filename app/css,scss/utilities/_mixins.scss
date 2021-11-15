@@ -1,0 +1,15 @@
+@mixin contact-btn($clr) {
+  padding: 0.5em 1em;
+  border: 2px solid $clr;
+  border-radius: 10rem;
+  color: $clr;
+  font-weight: 600;
+}
+
+@mixin circle($scale) {
+  height: $scale;
+  width: $scale;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid $cyan;
+}

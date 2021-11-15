@@ -1,0 +1,154 @@
+.members {
+  position: relative;
+  padding: 8rem 0;
+  background: $lightGreen;
+  color: #fff;
+
+  .pt2-a {
+    width: 10rem;
+    position: absolute;
+    top: 0;
+    left: -5rem;
+  }
+
+  .pt3-a {
+    width: 10rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .members-container {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.members-flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+
+  .member {
+    background: $darkGreen;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    .front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //display: none;
+    }
+
+    .back {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 85%;
+      //text-align: center;
+      display: none;
+
+      p {
+        margin: 1rem 0;
+      }
+
+      .soc {
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+
+        i {
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: $trans;
+
+          &:hover {
+            color: $lightRed;
+          }
+        }
+      }
+    }
+
+    h3 {
+      color: $cyan;
+    }
+
+    .circle {
+      @include circle(5rem);
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    button {
+      position: absolute;
+      left: 50%;
+      bottom: -1.5rem;
+      transform: translateX(-50%);
+      background: $lightRed;
+      height: 3rem;
+      width: 3rem;
+      font-size: 1.25rem;
+      font-weight: 200;
+      border-radius: 50%;
+      border: none;
+
+      i {
+        color: $darkGreen;
+      }
+
+      &:hover {
+        background: $cyan;
+      }
+
+      &.clicked {
+        background: $cyan;
+
+        i {
+          color: #fff;
+          text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+        }
+
+        &:hover {
+          background: $lightRed;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .members {
+    .members-container {
+      h2 {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  .members-flex {
+    grid-template-columns: repeat(2, 1fr);
+
+    .member {
+      padding: 4rem 0;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .members-flex {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

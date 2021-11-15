@@ -1,0 +1,80 @@
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+
+  .navbar {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+
+    .navlist {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .nav-item {
+        transition: $trans;
+        display: none;
+
+        a {
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+
+        &.special {
+          margin-left: auto;
+
+          a {
+            @include contact-btn(#fff);
+
+            &:hover {
+              background: #fff;
+              color: $mainGreen;
+            }
+          }
+        }
+
+        &.burger-menu {
+          display: block;
+        }
+
+        &:hover {
+          a {
+            color: $lightRed;
+          }
+        }
+      }
+    }
+  }
+}
+
+#logo {
+  width: 40vw;
+  max-width: 10rem;
+}
+
+@media (min-width: 900px) {
+  .nav-container {
+    .navbar {
+      justify-content: flex-start;
+      padding: 3rem 0;
+      .navlist {
+        width: 100%;
+        .nav-item {
+          display: block;
+
+          &.burger-menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
