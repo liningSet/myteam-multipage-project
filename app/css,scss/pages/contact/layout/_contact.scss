@@ -1,0 +1,170 @@
+.contact {
+  position: relative;
+  background: $mainGreen;
+  color: #fff;
+  padding: 10rem 0 8rem;
+  text-align: center;
+
+  .pt1-c {
+    position: absolute;
+    width: 10rem;
+    left: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  .pt2-c {
+    position: absolute;
+    width: 10rem;
+    right: -5rem;
+    bottom: 0;
+  }
+
+  .contact-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    .contact-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 10;
+
+      h2 {
+        color: $lightRed;
+        margin-bottom: 2rem;
+      }
+
+      .subjects {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 1rem;
+
+        .subject {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+      }
+    }
+
+    .contact-form {
+      flex: 1;
+      display: grid;
+      grid-auto-rows: 5rem;
+      overflow: hidden;
+      grid-template-areas:
+        "name"
+        "email"
+        "company"
+        "title"
+        "textarea"
+        "textarea";
+
+      .name {
+        grid-area: name;
+      }
+      .e-mail {
+        grid-area: email;
+      }
+      .company {
+        grid-area: company;
+      }
+      .title {
+        grid-area: title;
+      }
+      .message {
+        grid-area: textarea;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        height: 100%;
+        background: $mainGreen;
+        border: none;
+        border-bottom: 1px solid #fff;
+        transition: $trans;
+        padding: 1.25rem;
+        color: #fff;
+        font-family: inherit;
+        resize: none;
+        z-index: 10;
+        font-size: 1.35rem;
+
+        &::placeholder {
+          font-weight: 800;
+          font-size: 1rem;
+        }
+
+        &:focus {
+          outline: none;
+          border-bottom-color: $cyan;
+        }
+      }
+
+      .err-m-req {
+        color: $lightRed;
+        font-style: italic;
+        position: relative;
+        font-weight: 600;
+        font-size: 0.75rem;
+        transition: $trans;
+        transform: translateX(100%);
+        text-align: right;
+      }
+
+      .error {
+        input,
+        textarea {
+          border-bottom-color: $lightRed;
+          color: $lightRed;
+        }
+        .err-m-req,
+        .err-m-format {
+          transform: translateX(0);
+        }
+      }
+
+      button {
+        @include contact-btn(#fff);
+        font-size: 1.25rem;
+        justify-self: start;
+        align-self: center;
+        background: #fff;
+        color: $darkGreen;
+
+        &:hover {
+          background: $cyan;
+          border-color: $cyan;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    .pt1-c {
+      display: block;
+      width: 15rem;
+      left: -7.5rem;
+    }
+    .pt2-c {
+      width: 15rem;
+      right: -7.5rem;
+    }
+    text-align: left;
+    .contact-container {
+      flex-direction: row;
+    }
+  }
+}

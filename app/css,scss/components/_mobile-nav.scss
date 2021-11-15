@@ -1,0 +1,70 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 999990;
+  transition: $trans;
+  opacity: 0;
+  pointer-events: none;
+
+  .mobile-nav-container {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: rgba(44, 98, 105, 0.95);
+    backdrop-filter: blur(20px);
+    padding-top: 8rem;
+    transition: inherit;
+    transform: translateX(100%);
+
+    .ptm {
+      width: 15rem;
+      position: absolute;
+      bottom: 0;
+      right: -7.5rem;
+    }
+
+    .mobile-nav {
+      width: 70%;
+      margin: 0 auto;
+
+      .mob-navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .nav-item {
+          transition: $trans;
+
+          a {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+          }
+
+          &.special {
+            a {
+              @include contact-btn(#fff);
+
+              &:hover {
+                background: #fff;
+                color: $mainGreen;
+              }
+            }
+          }
+
+          &:hover {
+            a {
+              color: $lightRed;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 @import "./components/navbar";
 @import "./components/burger-menu";
+@import "./components/mobile-nav";
 
 @import "./pages/home/layout/header";
 @import "./pages/home/layout/features";
@@ -16,7 +17,6 @@
 @import "./pages/about/layout/clients";
 
 @import "./pages/contact/layout/contact";
-@import "./pages/contact/layout/footer";
 
 * {
   padding: 0;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../css,scss/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;600;700&display=swap"
@@ -17,5 +17,161 @@
       crossorigin="anonymous"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="nav-container">
+      <div class="overlay">
+        <div class="mobile-nav-container">
+          <div class="mobile-nav">
+            <img
+              src="../images/bg-pattern-about-1-mobile-nav-1.svg"
+              alt=""
+              class="pt ptm"
+            />
+            <ul class="mob-navbar">
+              <li class="nav-item">
+                <a href="home.html">home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" target="blank">about</a>
+              </li>
+              <li class="nav-item special">
+                <a href="contact.html" target="blank">contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar">
+        <a href="./home.html" target="blank">
+          <img src="../images/logo.svg" alt="" id="logo" />
+        </a>
+        <ul class="navlist">
+          <li class="nav-item">
+            <a href="home.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" target="blank">about</a>
+          </li>
+          <li class="nav-item special">
+            <a href="contact.html" target="blank">contact us</a>
+          </li>
+
+          <li class="nav-item burger-menu">
+            <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80">
+              <path
+                class="line top"
+                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+              />
+              <path class="line middle" d="m 70,50 h -40" />
+              <path
+                class="line bottom"
+                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+              />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="contact">
+      <img
+        src="../images/bg-pattern-about-2-contact-1.svg"
+        alt=""
+        class="pt pt1-c"
+      />
+      <img src="../images/bg-pattern-contact-2.svg" alt="" class="pt pt2-c" />
+
+      <div class="contact-container">
+        <div class="contact-text">
+          <h1>Contact</h1>
+          <h2>Ask us about</h2>
+
+          <div class="subjects">
+            <div class="subject">
+              <img src="../images/icon-person.svg" alt="" />
+              <h3>Person The quality of our talent network</h3>
+            </div>
+            <div class="subject">
+              <img src="../images/icon-cog.svg" alt="" />
+              <h3>Usage & implementation of our software</h3>
+            </div>
+            <div class="subject">
+              <img src="../images/icon-chart.svg" alt="" />
+              <h3>How we help drive innovation</h3>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" novalidate>
+          <div class="name">
+            <input type="text" placeholder="Name" required />
+            <div class="err-m-req">This field is required</div>
+          </div>
+
+          <div class="e-mail">
+            <input type="email" placeholder="Email Address" required />
+            <div class="err-m-req">This field is required</div>
+            <!-- <div class="err-m-format">This is not an email</div> -->
+          </div>
+
+          <div class="company-name">
+            <input type="text" placeholder="Company Name" required />
+            <div class="err-m-req">This field is required</div>
+          </div>
+
+          <div class="title">
+            <input type="text" placeholder="Title" required />
+            <div class="err-m-req">This field is required</div>
+          </div>
+
+          <div class="message">
+            <textarea cols="30" rows="10" placeholder="Message" required>
+            </textarea>
+            <div class="err-m-req">This field is required</div>
+          </div>
+
+          <button>Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="fs">
+          <div class="f1">
+            <img src="../images/logo.svg" alt="" class="footer-logo" />
+
+            <ul class="footer-nav">
+              <li><a href="./home.html">home</a></li>
+              <li><a href="./about.html" target="blank">about</a></li>
+            </ul>
+          </div>
+          <div class="f2">
+            <span>987 Hillcrest Lane </span>
+            <span>Irvine, CA</span>
+            <span>California 92714</span>
+            <span>Call Us : 949-833-7432</span>
+          </div>
+        </div>
+        <div class="f3">
+          <ul class="social">
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fab fa-pinterest"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+          </ul>
+
+          <span>Copyright 2020. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+      integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
+  </body>
 </html>
