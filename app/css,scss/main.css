@@ -310,7 +310,7 @@
 }
 
 @media (min-width: 1100px) {
-  header .pt1 {
+  .home-header .pt1 {
     display: block;
   }
   .hero-text {

@@ -3,28 +3,33 @@ const overlay = document.querySelector(".overlay");
 const mobileNav = document.querySelector(".mobile-nav-container");
 const navbar = document.querySelector(".nav-container");
 
+function processClickStyles(
+  bodyOVERFLOW,
+  overlayOPACITY,
+  overlayPE,
+  mobileNavTRANSFORM
+) {
+  document.body.style.overflowY = bodyOVERFLOW;
+  overlay.style.opacity = overlayOPACITY;
+  overlay.style.pointerEvents = overlayPE;
+  mobileNav.style.transform = `translateX(${mobileNavTRANSFORM})`;
+}
+
 burgerBtn.addEventListener("click", () => {
   burgerBtn.classList.toggle("active");
 
   if (burgerBtn.classList.contains("active")) {
-    document.body.style.overflowY = "hidden";
-    overlay.style.opacity = "1";
-    overlay.style.pointerEvents = "auto";
-    mobileNav.style.transform = "translateX(0)";
+    processClickStyles("hidden", 1, "auto", 0);
   } else {
-    document.body.style.overflowY = "visible";
-    overlay.style.opacity = "0";
-    overlay.style.pointerEvents = "none";
-    mobileNav.style.transform = "translateX(100%)";
+    processClickStyles("visible", 0, "none", "100%");
   }
 });
 
-overlay.addEventListener("click", () => {
-  document.body.style.overflowY = "visible";
-  overlay.style.opacity = "0";
-  overlay.style.pointerEvents = "none";
-  mobileNav.style.transform = "translateX(100%)";
-  burgerBtn.classList.remove("active");
+overlay.addEventListener("click", (e) => {
+  if (e.target.classList.contains("overlay")) {
+    processClickStyles("visible", 0, "none", "100%");
+    burgerBtn.classList.remove("active");
+  }
 });
 
 const options = {
